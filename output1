@@ -1,0 +1,63 @@
+ans =
+
+    'path:     ../bags/m100exp005.bag
+     version:  2.0
+     duration: 3:23s (203s)
+     start:    Sep 03 2019 19:15:38.58 (1567509338.58)
+     end:      Sep 03 2019 19:19:02.51 (1567509542.51)
+     size:     9.6 MB
+     messages: 40791
+     types:    geometry_msgs/Vector3Stamped    [7b324c7325e683bf02a9b14b01090ec7]
+               mav_msgs/RollPitchYawrateThrust [10a56a30857affade0889a3662fc2bc9]
+               sensor_msgs/Imu                 [6a62c6daae103f4ff57a132d6f95cec2]
+     topics:   /dji_sdk/imu                              20395 msgs  : sensor_msgs/Imu                
+               /dji_sdk/velocity                         10198 msgs  : geometry_msgs/Vector3Stamped   
+               /raven/command/roll_pitch_yawrate_thrust  10198 msgs  : mav_msgs/RollPitchYawrateThrust
+     '
+
+
+ans =
+
+    'path:     ../bags/m100exp006.bag
+     version:  2.0
+     duration: 4:16s (256s)
+     start:    Sep 03 2019 19:20:41.18 (1567509641.18)
+     end:      Sep 03 2019 19:24:57.56 (1567509897.56)
+     size:     12.1 MB
+     messages: 51277
+     types:    geometry_msgs/Vector3Stamped    [7b324c7325e683bf02a9b14b01090ec7]
+               mav_msgs/RollPitchYawrateThrust [10a56a30857affade0889a3662fc2bc9]
+               sensor_msgs/Imu                 [6a62c6daae103f4ff57a132d6f95cec2]
+     topics:   /dji_sdk/imu                              25639 msgs  : sensor_msgs/Imu                
+               /dji_sdk/velocity                         12819 msgs  : geometry_msgs/Vector3Stamped   
+               /raven/command/roll_pitch_yawrate_thrust  12819 msgs  : mav_msgs/RollPitchYawrateThrust
+     '
+
+The roll model is estimated using experiment 1 and validated on data from experiment 2
+The roll model fits the validation data with **63.5696** %
+The pitch model is estimated using experiment 1 and validated on data from experiment 2
+The pitch model fits the validation data with **69.0937** %
+Roll estimated transfer function is: 
+
+ans =
+ 
+  From input "roll_{cmd}" to output "roll":
+    3.644
+  ---------
+  s + 3.252
+ 
+Continuous-time transfer function.
+
+roll tau=0.308, gain=1.121
+Pitch estimated transfer function is: 
+
+ans =
+ 
+  From input "pitch_{cmd}" to output "pitch":
+    3.778
+  ---------
+  s + 3.338
+ 
+Continuous-time transfer function.
+
+pitch tau=0.300, gain=1.132
