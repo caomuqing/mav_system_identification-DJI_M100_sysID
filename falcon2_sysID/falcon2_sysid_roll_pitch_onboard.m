@@ -181,7 +181,7 @@ title('pitch from IMU');
 %Control parameters
 
 delay=[]; NaN; % [] menas no time delay or NaN for enabling delay estimation.
-np=1; % 1 or 2 for the order of dynamics system.
+np=2; % 1 or 2 for the order of dynamics system.
 
 %% The length of data may vary.
 %Experiment1.t = (Experiment1.IMU.t + Experiment1.RCData.t)/2;

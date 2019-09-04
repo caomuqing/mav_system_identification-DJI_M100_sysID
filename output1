@@ -61,3 +61,155 @@ ans =
 Continuous-time transfer function.
 
 pitch tau=0.300, gain=1.132
+
+ans =
+
+    'path:     ../bags/m100exp005.bag
+     version:  2.0
+     duration: 3:23s (203s)
+     start:    Sep 03 2019 19:15:38.58 (1567509338.58)
+     end:      Sep 03 2019 19:19:02.51 (1567509542.51)
+     size:     9.6 MB
+     messages: 40791
+     types:    geometry_msgs/Vector3Stamped    [7b324c7325e683bf02a9b14b01090ec7]
+               mav_msgs/RollPitchYawrateThrust [10a56a30857affade0889a3662fc2bc9]
+               sensor_msgs/Imu                 [6a62c6daae103f4ff57a132d6f95cec2]
+     topics:   /dji_sdk/imu                              20395 msgs  : sensor_msgs/Imu                
+               /dji_sdk/velocity                         10198 msgs  : geometry_msgs/Vector3Stamped   
+               /raven/command/roll_pitch_yawrate_thrust  10198 msgs  : mav_msgs/RollPitchYawrateThrust
+     '
+
+
+ans =
+
+    'path:     ../bags/m100exp006.bag
+     version:  2.0
+     duration: 4:16s (256s)
+     start:    Sep 03 2019 19:20:41.18 (1567509641.18)
+     end:      Sep 03 2019 19:24:57.56 (1567509897.56)
+     size:     12.1 MB
+     messages: 51277
+     types:    geometry_msgs/Vector3Stamped    [7b324c7325e683bf02a9b14b01090ec7]
+               mav_msgs/RollPitchYawrateThrust [10a56a30857affade0889a3662fc2bc9]
+               sensor_msgs/Imu                 [6a62c6daae103f4ff57a132d6f95cec2]
+     topics:   /dji_sdk/imu                              25639 msgs  : sensor_msgs/Imu                
+               /dji_sdk/velocity                         12819 msgs  : geometry_msgs/Vector3Stamped   
+               /raven/command/roll_pitch_yawrate_thrust  12819 msgs  : mav_msgs/RollPitchYawrateThrust
+     '
+
+The roll model is estimated using experiment 1 and validated on data from experiment 2
+The roll model fits the validation data with **84.9622** %
+The pitch model is estimated using experiment 1 and validated on data from experiment 2
+The pitch model fits the validation data with **89.1548** %
+Roll estimated transfer function is: 
+
+ans =
+ 
+  From input "roll_{cmd}" to output "roll":
+          39.71
+  ---------------------
+  s^2 + 7.678 s + 41.03
+ 
+Continuous-time transfer function.
+
+roll omega=6.405, gain=0.968 damping=0.599
+Pitch estimated transfer function is: 
+
+ans =
+ 
+  From input "pitch_{cmd}" to output "pitch":
+          39.35
+  ---------------------
+  s^2 + 7.683 s + 40.28
+ 
+Continuous-time transfer function.
+
+pitch omega=6.346, gain=0.977 damping=0.605
+
+The yawrate model is estimated using experiment 007 and validated on data from experiment 008
+The yawrate model fits the validation data with **88.0677** %
+yawrate estimated transfer function is: 
+
+ans =
+ 
+  From input "yawrate_{cmd}" to output "yawrate":
+          90.91
+  ---------------------
+  s^2 + 18.96 s + 95.75
+ 
+Continuous-time transfer function.
+
+yawrate omega=9.785, gain=0.949 damping=0.969
+
+The yawrate model is estimated using experiment 007 and validated on data from experiment 008
+The yawrate model fits the validation data with **83.7144** %
+yawrate estimated transfer function is: 
+
+ans =
+ 
+  From input "yawrate_{cmd}" to output "yawrate":
+    4.41
+  ---------
+  s + 4.467
+ 
+Continuous-time transfer function.
+
+yawrate gain=0.987, tau=0.224
+
+The roll model is estimated using experiment 007 and validated on data from experiment 008
+The roll model fits the validation data with **70.4892** %
+The pitch model is estimated using experiment 007 and validated on data from experiment 008
+The pitch model fits the validation data with **76.1357** %
+Roll estimated transfer function is: 
+
+ans =
+ 
+  From input "roll_{cmd}" to output "roll":
+    4.275
+  ---------
+  s + 3.703
+ 
+Continuous-time transfer function.
+
+roll tau=0.270, gain=1.155
+Pitch estimated transfer function is: 
+
+ans =
+ 
+  From input "pitch_{cmd}" to output "pitch":
+    4.128
+  ---------
+  s + 3.831
+ 
+Continuous-time transfer function.
+
+pitch tau=0.261, gain=1.077
+
+The roll model is estimated using experiment 008 and validated on data from experiment 007
+The roll model fits the validation data with **84.1863** %
+The pitch model is estimated using experiment 008 and validated on data from experiment 007
+The pitch model fits the validation data with **88.6577** %
+Roll estimated transfer function is: 
+
+ans =
+ 
+  From input "roll_{cmd}" to output "roll":
+          40.6
+  ---------------------
+  s^2 + 8.123 s + 42.22
+ 
+Continuous-time transfer function.
+
+roll omega=6.498, gain=0.961 damping=0.625
+Pitch estimated transfer function is: 
+
+ans =
+ 
+  From input "pitch_{cmd}" to output "pitch":
+          38.64
+  ---------------------
+  s^2 + 8.104 s + 40.34
+ 
+Continuous-time transfer function.
+
+pitch omega=6.351, gain=0.958 damping=0.638

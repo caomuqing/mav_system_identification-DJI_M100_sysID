@@ -17,12 +17,12 @@ path(path, '../read_bags');
 path(path, '../helper_functions');
 
 % two experiments are needed to validate the identification
-bagfile_exp1 =  '../bags/falcon2_exp01.bag';
-bagfile_exp2 =  '../bags/falcon2_exp02.bag';
+bagfile_exp1 =  '../bags/m100exp007.bag';
+bagfile_exp2 =  '../bags/m100exp008.bag';
 
 
-topic_imu = '/falcon2/dji_sdk/imu';
-topic_vcdata = '/falcon2/dji_sdk/vc_cmd';
+topic_imu = '/dji_sdk/imu';
+topic_vcdata = '/raven/command/roll_pitch_yawrate_thrust';
 
 bag1 = ros.Bag(bagfile_exp1);
 bag2 = ros.Bag(bagfile_exp2);
@@ -106,22 +106,16 @@ k_yaw = 0.002235;
 
 %DJI vc channel, 1=pitch, 2=roll, 3=vertical velocity, 4=yaw_rate.
 
-Experiment1.roll_cmd    = (Experiment1.RCData.roll-1024)...
-    *k_roll;
-Experiment1.pitch_cmd   = (Experiment1.RCData.pitch-1024)...
-    *k_pitch;
-Experiment1.yaw_cmd = -(Experiment1.RCData.yaw_rate-1024)*k_yaw;
-Experiment1.thrust_cmd  = (Experiment1.RCData.verti_vel-1024)...
-    *k_thrust;%stick velocity command.
+Experiment1.roll_cmd    = (Experiment1.RCData.roll);
+Experiment1.pitch_cmd   = (Experiment1.RCData.pitch);
+Experiment1.yaw_cmd = (Experiment1.RCData.yaw_rate);
+Experiment1.thrust_cmd  = (Experiment1.RCData.verti_vel);%stick velocity command.
 
 
-Experiment2.roll_cmd    = (Experiment2.RCData.roll-1024)...
-    *k_pitch;
-Experiment2.pitch_cmd   = (Experiment2.RCData.pitch-1024)...
-    *k_roll;
-Experiment2.yaw_cmd = -(Experiment2.RCData.yaw_rate-1024)*k_yaw;
-Experiment2.thrust_cmd  = (Experiment2.RCData.verti_vel-1024)...
-    *k_thrust;
+Experiment2.roll_cmd    = (Experiment2.RCData.roll);
+Experiment2.pitch_cmd   = (Experiment2.RCData.pitch);
+Experiment2.yaw_cmd = (Experiment2.RCData.yaw_rate);
+Experiment2.thrust_cmd  = (Experiment2.RCData.verti_vel);
 
 figure;
 % *Plot attitude from experiment 2*
@@ -141,7 +135,7 @@ title('yaw rate from IMU');
 %Control parameters
 
 delay=[]; NaN; % [] menas no time delay or NaN for enabling delay estimation.
-np=2; % 1 or 2 for the order of dynamics system.
+np=1; % 1 or 2 for the order of dynamics system.
 nz = 0;
 
 %% The length of data may vary.
