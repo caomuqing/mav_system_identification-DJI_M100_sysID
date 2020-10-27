@@ -1,6 +1,8 @@
 # mav_system_identification
 Matlab scripts to perform system identification for DJI 100
 
+A fork of ETHZ's original man_system_identification package with modifications to suit latest mav_control_rw package and osdk3.8.
+
 In order to run this script, m100_sysid.m, you need matlab_rosbag package
 https://github.com/bcharrow/matlab_rosbag (source)
 https://github.com/bcharrow/matlab_rosbag/releases (binary)
